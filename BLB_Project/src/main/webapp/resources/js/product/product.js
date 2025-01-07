@@ -191,8 +191,6 @@ $(document).ready(function () {
                 
                 if (response.success) {
                     // 성공 메시지
-                    // togglerEvent.active('shopping_bag', '', '장바구니 등록 성공!');
-                    // alertify.success(response.message);
                     showSuccessMessage();
                 } else {
                     // 실패 메시지
@@ -205,19 +203,6 @@ $(document).ready(function () {
         });
     });
 
-    // function showSuccessMessage() {
-    //     const reviewIframeUrl = `${contextPath}/successForm.ct`;
-    //     $(iframe).attr('src', reviewIframeUrl);
-
-    //     // iframe 크기 조정
-    //     iframe.on('load', function () {
-    //         adjustIframeSize(this); // 크기 조정 함수 호출
-    //     });
-
-    //     // 모달 표시
-    //     $('#reviewIframeContainer').fadeIn();
-    // }
-    
     // 바로 구매
     $('#buyNow').click(function() {
         alert('구매 페이지로 이동합니다.');
