@@ -117,8 +117,6 @@
                                             <th>상품명</th>
                                             <th>상품설명</th>
                                             <th>상품가격</th>
-                                            <!-- <th>주요성분</th>
-                                            <th>주의사항</th> -->
                                             <th>조회수</th>
                                             <th>등록일</th>
                                             <th>상태</th>
@@ -142,8 +140,6 @@
                                                 <td contenteditable="true">${p.prodName}</td>
                                                 <td contenteditable="true">${p.prodContent}</td>
                                                 <td contenteditable="true">${p.prodPrice}</td>
-                                                <!-- <td contenteditable="true">${p.prodOrigin}</td>
-                                                <td contenteditable="true">${p.prodCaution}</td> -->
                                                 <td>${p.prodCount}</td>
                                                 <td><fmt:formatDate value="${p.prodEnrollDate}" pattern="yyyy-MM-dd hh:mm" /></td>
                                                 <td contenteditable="true">${p.prodStatus}</td>
@@ -291,7 +287,6 @@
                             <input type="hidden" id="prodNo" name="prodNo">
                             <div class="mb-3">
                                 <label for="categoryName" class="form-label">카테고리</label>
-                                <!-- <input type="text" id="editCategoryName" name="categoryName" required> -->
                                 <select class="form-control" id="categoryEditName" name="categoryName" required>
                                     <option value="">카테고리를 선택하세요</option>
                                     <option value="스킨케어">스킨케어</option>
@@ -302,7 +297,6 @@
                             </div>
                             <div class="mb-3">
                                 <label for="subcategoryName" class="form-label">서브카테고리</label>
-                                <!-- <input type="text" id="editSubcategoryName" name="subcategoryName" required> -->
                                 <select class="form-control" id="subcategoryEditName" name="subcategoryName" required>
                                     <option value="">서브카테고리를 선택하세요</option>
                                 </select>
@@ -396,12 +390,8 @@
                     order: [[0, 'desc']], // 첫 번째 컬럼(0-indexed)을 내림차순(desc)으로 정렬
                     pageLength: 25, // 기본값: 10
                     lengthMenu: [10, 25, 50, 100],
-                    // scrollX: true, // 가로 스크롤 활성화
                     scrollY: '700px', // 세로 스크롤 높이 (px 단위로 설정)
                     fixedHeader: true, // 헤더 고정
-                    // fixedColumns: {
-                    //     left: 2 // 왼쪽에서 두 번째 열까지 고정
-                    // },
                     columnDefs: [
                         { targets: 3, width: '300px'},
                         { targets: 4, width: '350px'},
@@ -447,8 +437,6 @@
                         prodName: row.find('td').eq(3).text(),
                         prodContent: row.find('td').eq(4).text(),
                         prodPrice: parseInt(row.find('td').eq(5).text().trim(), 10) || 0, // 숫자 변환
-                        // prodOrigin: row.find('td').eq(6).text(),
-                        // prodCaution: row.find('td').eq(7).text(),
                         prodStatus: row.find('td').eq(8).text()
                     };
 
